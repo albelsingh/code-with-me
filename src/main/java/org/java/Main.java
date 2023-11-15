@@ -1,9 +1,12 @@
 package org.java;
 
+import lombok.extern.slf4j.Slf4j;
 import org.java.streamApi.StreamAPICode;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.java.TestClass.printPairs;
 
 public class Main {
 
@@ -24,5 +27,15 @@ public class Main {
         System.out.println("Sorted String ::"+streamAPICode.sortList(stringList));
         streamAPICode.printNumber(list);
         System.out.println("sum of list is ::"+streamAPICode.calculateSum(list));
+
+        TestClass test=new TestClass();
+        String str=test.reverseString("albel");
+        System.out.println("String is "+str);
+
+        int arr[] = { 1, 5, 7, -1, 5 };
+        int n = arr.length;
+        int sum = 6;
+
+        printPairs(arr, n, sum);
     }
 }

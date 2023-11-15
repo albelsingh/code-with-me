@@ -1,9 +1,12 @@
 package org.java.streamApi;
 
+import lombok.Data;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 
+@Data
 public class StreamAPICode {
 
     public List<Integer> calculateSquare(List<Integer> list){
