@@ -1,8 +1,9 @@
-package org.java;
+package org.java.streamApi;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
-public class TestClass {
+public class CoForges {
 
 
     Integer[] arr = {2, 6, 4, 10, 8};
@@ -23,7 +24,7 @@ public class TestClass {
 
     // Returns number of pairs in arr[0..n-1]
     // with sum equal to 'sum'
-    static void printPairs(int arr[], int n, int sum) {
+    public static void printPairs(int arr[], int n, int sum) {
 
         // Store counts of all elements in map m
         HashMap<Integer, Integer> mp
@@ -49,5 +50,24 @@ public class TestClass {
                 mp.put(arr[i], 1);
             }
         }
+    }
+
+    public static void getPaire(int arr[],int sum)
+    {
+        HashMap<Integer,Integer> hashMap=new HashMap<>();
+        Arrays.stream(arr).forEach(i->{
+            int rem= sum-i;
+            if(hashMap.containsKey(rem)){
+                int count=hashMap.get(rem);
+                for(int j=0;j<count;j++)
+                System.out.println("Paire is ("+rem+","+i+")");
+            }
+            if(hashMap.containsKey(i)){
+                hashMap.put(i, hashMap.get(i)+1);
+            }
+            else{
+                  hashMap.put(i,1);
+            }
+        });
     }
 }

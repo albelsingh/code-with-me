@@ -1,0 +1,62 @@
+tech:
+  base_uri: ${API_BASE_URL:localhost:8080}
+server:
+  port: ${DEFAULT_PORT:8080}
+  servlet:
+    context-path: /code-with-me
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: code-with-me
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+    datasource:
+      url: jdbc:mysql://${SCF_MYSQL_HOST:localhost}:${SCF_MYSQL_PORT:3306}/${USER_DB_NAME:user_profile}
+      username: ${SCF_MYSQL_USER:root}
+      password: ${SCF_MYSQL_PASSWORD:password}
+  jpa:
+    show-sql: ${SCF_SHOW_SQL:true}
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: ${SCF_DIALECT:org.hibernate.dialect.MySQL5Dialect}
+      #data:
+      # mongodb:
+      # database: ${DOC_DB_NAME:}
+      # uri: mongodb://${DOC_DB_USER:}:${DOC_DB_PASSWORD:}@${DOC_DB_HOST:localhost}:${DOC_DB_PORT:27017}/${DOC_DB_NAME:}
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+connection:
+  TimeOut: '${CONNECTION_TIMEOUT:50000}'
+read:
+  TimeOut: '${READ_TIMEOUT:50000}'
+
+logging:
+  level:
+    root: ${LOG_LEVEL_ERROR:INFO}
+    org:
+      java: ${SCF_LOG_LEVEL:DEBUG}
+
+
+kafka:
+  broker:
+    list: ${KAFKA_BROKER_LIST:localhost:9092}
+    message-topic: ${KAFKA_MSG_TOPIC:message-topic}
+    message-groupId: ${KAFKA_MSG_GROUPID:msg}
+    reply-topic: ${KAFKA_SUCCESS_RESPONSE:message-response}
+  consumer:
+    maxPartitionsFetchBytes: ${KAFKA_MAX_PARTITION_FETCH_BYTES:100000000}
+    fetchMaxBytes: ${KAFKA_FETCH_MAX_BYTES:100000000}
+  producer:
+    maxRequestSize: ${KAFKA_MAX_REQUEST_SIZE:100000000}
+  configuration:
+    trusted-packages: "*"

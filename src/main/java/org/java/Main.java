@@ -1,12 +1,18 @@
 package org.java;
 
-import lombok.extern.slf4j.Slf4j;
+import org.java.streamApi.CTS;
 import org.java.streamApi.StreamAPICode;
+import org.java.streamApi.CoForges;
+import org.java.test.SumOfElements;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import static org.java.TestClass.printPairs;
+import static org.java.streamApi.CoForges.getPaire;
+import static org.java.streamApi.CoForges.printPairs;
 
 public class Main {
 
@@ -17,7 +23,17 @@ public class Main {
         list.add(new Integer(13));
         list.add(new Integer(14));
         list.add(new Integer(15));
+        System.out.println("Sum is:: "+list.stream().mapToInt(x->x).sum());
+        System.out.println("Min is:: "+list.stream().mapToInt(x->x).min());
+        System.out.println("Max is:: "+list.stream().mapToInt(x->x).max());
+        System.out.println("3rd largest element is:: "+list.stream().mapToInt(x->x).sorted().limit(2).min());
         System.out.println("Square are ::"+streamAPICode.calculateSquare(list));
+        List<String> G7 = Arrays.asList("USA", "Japan", "France", "Germany",
+                "Italy", "U.K.","Canada");
+        String G7Countries = G7.stream()
+                .map(x -> x.toUpperCase())
+                .collect(Collectors.joining(", "));
+        System.out.println(" Join String "+G7Countries);
 
         List<String> stringList=new ArrayList<>();
         stringList.add("Reflection");
@@ -28,7 +44,7 @@ public class Main {
         streamAPICode.printNumber(list);
         System.out.println("sum of list is ::"+streamAPICode.calculateSum(list));
 
-        TestClass test=new TestClass();
+        CoForges test=new CoForges();
         String str=test.reverseString("albel");
         System.out.println("String is "+str);
 
@@ -37,5 +53,12 @@ public class Main {
         int sum = 6;
 
         printPairs(arr, n, sum);
+        getPaire(arr,6);
+
+        CTS cts=new CTS();
+        System.out.println();
+        cts.find3rdKey();
+        streamAPICode.flattenList();
+
     }
 }
