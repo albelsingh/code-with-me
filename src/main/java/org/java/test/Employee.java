@@ -20,6 +20,7 @@ public class Employee {
  private String name;
  private int age;
  private int salary;
+ private String dept;
 
 }
 @Slf4j
@@ -27,14 +28,14 @@ class main{
     public static void main(String[] args) {
         System.out.println("Inside main method");
         ArrayList<Employee> emplist = new ArrayList<>();
-        emplist.add(new Employee(101, "vinod", 25, 10000));
-        emplist.add(new Employee(107, "kumar", 35, 20000));
-        emplist.add(new Employee(103, "ravi", 15, 5000));
-        emplist.add(new Employee(100, "charan", 35, 10000));
-        emplist.add(new Employee(100, "rama", 45, 10000));
-        emplist.add(new Employee(110, "navi", 55, 30000));
-        emplist.add(new Employee(110, "abc", 65, 30000));
-        emplist.add(new Employee(110, "dummy", 75, 30000));
+        emplist.add(new Employee(101, "vinod", 25, 10000,"Dev"));
+        emplist.add(new Employee(107, "kumar", 35, 20000,"Dev"));
+        emplist.add(new Employee(103, "ravi", 15, 5000,"Dev"));
+        emplist.add(new Employee(100, "charan", 35, 10000,"Dev"));
+        emplist.add(new Employee(100, "rama", 45, 10000,"Dev"));
+        emplist.add(new Employee(110, "navi", 55, 30000,"Dev"));
+        emplist.add(new Employee(110, "abc", 65, 30000,"Dev"));
+        emplist.add(new Employee(110, "dummy", 75, 30000,"Dev"));
 
         List<Employee> list= emplist.stream().sorted(Comparator.comparing(emp-> -emp.getSalary())).collect(Collectors.toList());
         HashMap<String,Employee> map=new HashMap<>();
@@ -63,6 +64,8 @@ class main{
                 .sorted(Comparator.comparing(entry->-entry.getKey()))
                 .collect(toList())
                 .get(2));
+
+        System.out.println(emplist.stream().sorted(Comparator.comparing(emp->- emp.getSalary())).collect(toList()).get(2));
 
     }
 }

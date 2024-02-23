@@ -1,4 +1,4 @@
-package org.java.singleton;
+package org.java.designpattern;
 
 // Java program implementing Singleton class
 // with using getInstance() method
@@ -8,7 +8,7 @@ package org.java.singleton;
 class Singleton {
     // Static variable reference of single_instance
     // of type Singleton
-    private static Singleton single_instance = null;
+    private static volatile Singleton single_instance = null;
 
     // Declaring a variable of type String
     public String s;
@@ -23,11 +23,18 @@ class Singleton {
 
     // Static method
     // Static method to create instance of Singleton class
-    public static synchronized Singleton getInstance()
+    public static Singleton getInstance()
     {
-        if (single_instance == null)
-            single_instance = new Singleton();
-
+        if (single_instance == null) {
+            // To make thread safe
+            synchronized (Singleton.class)
+            {
+                // check again as multiple threads
+                // can reach above step
+                if (single_instance== null)
+                    single_instance = new Singleton();
+            }
+        }
         return single_instance;
     }
 }

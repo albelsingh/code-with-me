@@ -81,6 +81,7 @@ public class CTS {
                 .stream()
                 .sorted(Comparator.comparing(it -> -it.getKey())) // minus sign for decreasing order
                 .collect(toList());
+
         return finalResult2.get(2); //n-1
     }
 }
