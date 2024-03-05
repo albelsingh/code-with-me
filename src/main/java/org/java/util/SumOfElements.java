@@ -1,11 +1,8 @@
-package org.java.test;
-
-import org.java.streamApi.CTS;
+package org.java.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class SumOfElements {
     public static void getSum() {

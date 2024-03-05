@@ -1,4 +1,4 @@
-package org.java.test;
+package org.java.util;
 
 class MyThread {
 

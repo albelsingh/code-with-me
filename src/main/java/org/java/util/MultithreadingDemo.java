@@ -1,4 +1,4 @@
-package org.java.test;
+package org.java.util;
 
 import java.util.PriorityQueue;
 import java.util.Queue;

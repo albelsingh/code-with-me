@@ -30,8 +30,7 @@ final class Student {
         Map<String, String> tempMap = new HashMap<>();
 
         // Iterating using for-each loop
-        for (Map.Entry<String, String> entry :
-                metadata.entrySet()) {
+        for (Map.Entry<String, String> entry : metadata.entrySet()) {
             tempMap.put(entry.getKey(), entry.getValue());
         }
 
@@ -51,7 +50,6 @@ final class Student {
     // To get meta data
     public Map<String, String> getMetadata()
     {
-
         // Creating Map with HashMap reference
         Map<String, String> tempMap = new HashMap<>();
 

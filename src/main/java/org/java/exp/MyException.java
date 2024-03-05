@@ -2,7 +2,7 @@ package org.java.exp;
 
 // A Class that represents use-defined exception
 
-class MyException extends Exception {
+class MyException extends RuntimeException {
     public MyException(String s)
     {
         // Call constructor of parent Exception

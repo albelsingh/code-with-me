@@ -1,7 +1,6 @@
-package org.java.test;
+package org.java.util;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class NonDuplicateElement {
     int[] arr = {1,2,3,4,2,1,5,6,6}; //3,4,5

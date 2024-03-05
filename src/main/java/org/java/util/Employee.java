@@ -1,4 +1,4 @@
-package org.java.test;
+package org.java.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -49,7 +49,7 @@ class main{
         System.out.println("Result::"+empMap);
 
 
-        System.out.println("By Salary::"+map.entrySet().stream()
+       /* System.out.println("By Salary::"+map.entrySet().stream()
                 .collect(Collectors.groupingBy(entry->entry.getValue().getSalary(),Collectors.mapping(entry->entry.getKey(),toList())))
                 .entrySet()
                 .stream()
@@ -63,7 +63,7 @@ class main{
                 .stream()
                 .sorted(Comparator.comparing(entry->-entry.getKey()))
                 .collect(toList())
-                .get(2));
+                .get(2));*/
 
         System.out.println(emplist.stream().sorted(Comparator.comparing(emp->- emp.getSalary())).collect(toList()).get(2));
 

@@ -55,11 +55,6 @@ class USTDemo{
         list.add(u4);
         list.add(u5);
         System.out.println(list.stream().sorted(Comparator.comparing( u-> -u.getSalary())).collect(Collectors.toList()).get(3).getName());
-       /* HashMap<String,UST> map=new HashMap<>();
-        list.forEach(ust -> {
-            map.put(ust.getId(), ust);
-        });*/
-
         //System.out.println(map.entrySet().stream().sorted(Comparator.comparing( u-> -u.getValue().getSalary())).collect(Collectors.toList()).get(1).getValue().getName());
 
 

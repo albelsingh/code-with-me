@@ -1,11 +1,9 @@
-package org.java.test;
+package org.java.util;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Zensaar {
 
@@ -19,5 +17,7 @@ public class Zensaar {
         Integer n=list.stream().sorted(Comparator.comparing(i->-i)).collect(Collectors.toList()).get(2);
         System.out.println(n);
         list.stream().filter(i->i%2==0).forEach(System.out::println);
+
+
     }
 }

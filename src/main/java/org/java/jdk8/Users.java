@@ -1,12 +1,11 @@
 package org.java.jdk8;
 
-import org.java.test.Employee;
+import org.java.util.Employee;
 
 import java.util.*;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Users {
@@ -89,7 +88,7 @@ class UsersDemo{
         System.out.println(empMap);
         //emplist.stream().parallel().forEach(System.out::println);
         //
-        IntStream.rangeClosed(1,10).forEach(t->System.out.println(Thread.currentThread().getName() + t));
+        //IntStream.rangeClosed(1,10).forEach(t->System.out.println(Thread.currentThread().getName() + t));
         //IntStream.rangeClosed(1,10).parallel().forEach(t->System.out.println(Thread.currentThread().getName() + t));
         List<String> list1 = Arrays.asList("apple","apple","banana","apple","orange","banana","papaya");
         System.out.println(list1.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())));

@@ -1,6 +1,4 @@
-package org.java.test;
-
-import java.util.TreeSet;
+package org.java.util;
 
 public class Monkey extends  Animal{
     int i=10;

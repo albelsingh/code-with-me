@@ -1,4 +1,4 @@
-package org.java.test;
+package org.java.util;
 
 public class MT {
     static Object lock = new Object();

@@ -1,9 +1,8 @@
-package org.java.test;
+package org.java.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 public class LowesEmp {
@@ -112,5 +111,18 @@ public class LowesEmp {
         t.add(new StringBuilder("chetan"));
         System.out.println(t);//ClassCastException: java.lang.StringBuilder cannot be cast to java.lang.Comparable
         //SOLID*/
+
+        int arr[]=new int[]{1,2,3,4,5,6};
+        int start=1;
+        int end=4;
+        for(int i=start;i<=end;i++){
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+        for(int i=0;i<arr.length;i++)
+            System.out.println(arr[i]);
     }
 }
