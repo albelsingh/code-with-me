@@ -17,7 +17,5 @@ public class Zensaar {
         Integer n=list.stream().sorted(Comparator.comparing(i->-i)).collect(Collectors.toList()).get(2);
         System.out.println(n);
         list.stream().filter(i->i%2==0).forEach(System.out::println);
-
-
     }
 }

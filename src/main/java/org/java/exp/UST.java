@@ -54,6 +54,7 @@ class USTDemo{
         list.add(u3);
         list.add(u4);
         list.add(u5);
+        //find 3rd largest salary emp
         System.out.println(list.stream().sorted(Comparator.comparing( u-> -u.getSalary())).collect(Collectors.toList()).get(3).getName());
         //System.out.println(map.entrySet().stream().sorted(Comparator.comparing( u-> -u.getValue().getSalary())).collect(Collectors.toList()).get(1).getValue().getName());
 

@@ -46,5 +46,7 @@ public class Book implements Serializable {
         Book deBook= deserialize();
         System.out.println(deBook+" version"+deBook.serialVersionUID);
 
+
+
     }
 }

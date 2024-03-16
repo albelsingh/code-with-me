@@ -1,10 +1,14 @@
 package org.java;
 
 import lombok.extern.slf4j.Slf4j;
+import nonapi.io.github.classgraph.json.JSONUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class Main {
@@ -95,12 +99,19 @@ public class Main {
         System.out.println(str2.equals(str4));
         System.out.println(str3.hashCode() + " - " + str4.hashCode());
 */
-        List<Integer> list= new ArrayList<>();
+       /* List<Integer> list= new ArrayList<>();
         list.add(1);
         list.add(4); //16
         list.add(6); //36
         list.add(8); //64
         list.add(9); // even,sq and sum
         System.out.println(list.stream().filter(n->n%2==0).mapToInt(i->i*i).reduce(0,(left, right) -> left+right));
+        */
+        String s="aabccd%#$";
+        Map<String, Long> collect = Arrays.stream(s.replaceAll("[^a-zA-Z0-9]", "").split(""))
+                //.filter(ch->!ch.equals(" "))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(collect);
+
     }
 }
