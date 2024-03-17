@@ -70,7 +70,7 @@ final class Student {
 */
 // Class 2
 // Main class
-class GFG {
+class StudentDemo {
 
     // Main driver method
     public static void main(String[] args)

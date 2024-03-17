@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,6 +17,19 @@ public class Person {
     String name;
     String adddress;
     int age;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return getId() == person.getId() && getAge() == person.getAge() && getName().equals(person.getName()) && getAdddress().equals(person.getAdddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getAdddress(), getAge());
+    }
 
     public static void main(String[] args) {
         List<Person> persons=new ArrayList<>();
