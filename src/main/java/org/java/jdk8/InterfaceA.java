@@ -1,4 +1,4 @@
-package org.java.designpattern;
+package org.java.jdk8;
 
 public interface InterfaceA {
     int count=10;
