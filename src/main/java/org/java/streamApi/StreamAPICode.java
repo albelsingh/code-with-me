@@ -2,6 +2,7 @@ package org.java.streamApi;
 
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -57,6 +58,8 @@ public class StreamAPICode {
 
         System.out.println("The Structure after flattening is : " +
                 listofInts);
+
+
     }
 
 }

@@ -9,7 +9,7 @@ public class FailFastMap {
     public static void main(String[] args) {
 
         /**
-         * Fail safe: it does not maintain copy of map like CopyOnWriteArrayList
+         * Fail-safe: it does not maintain copy of map like CopyOnWriteArrayList
          */
         Map<Integer,String> m=new ConcurrentHashMap<>();
         m.put(1,"Albel");

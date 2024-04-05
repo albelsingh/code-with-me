@@ -89,7 +89,7 @@ public class EmployeeReminderService {
                 = CompletableFuture.supplyAsync(() -> "World");
 
         /**
-         * it does not return the any valuesNotice that the return type of the CompletableFuture.allOf() is a CompletableFuture<Void>.
+         * it does not return the any values Notice that the return type of the CompletableFuture.allOf() is a CompletableFuture<Void>.
          * The limitation of this method is that it does not return the combined results of all Futures. Instead, we have to get results
          * from Futures manually. Fortunately, CompletableFuture.join() method and Java 8 Streams API makes it simple
          */

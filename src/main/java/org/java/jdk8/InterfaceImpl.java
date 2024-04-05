@@ -3,7 +3,7 @@ package org.java.jdk8;
 public class InterfaceImpl implements InterfaceA,InterfaceB{
     @Override
     public void show() {
-        InterfaceB.super.show();
+        InterfaceA.super.show();
     }
     public static void main(String[] args) {
         try {
@@ -17,5 +17,6 @@ public class InterfaceImpl implements InterfaceA,InterfaceB{
             System.out.println("Error caught in catch block");
         }
     }
+
 
 }

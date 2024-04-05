@@ -3,10 +3,7 @@ package org.java;
 import lombok.extern.slf4j.Slf4j;
 import nonapi.io.github.classgraph.json.JSONUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -111,7 +108,16 @@ public class Main {
         Map<String, Long> collect = Arrays.stream(s.replaceAll("[^a-zA-Z0-9]", "").split(""))
                 //.filter(ch->!ch.equals(" "))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        System.out.println(collect);
+        //System.out.println(collect);
+
+//List<Integer> myList = Arrays.asList(10,15,8,49,25,98,98,32,15);
+//Output : 98,15
+
+        List<Integer> list=Arrays.asList(10,15,8,49,25,98,98,32,15);
+
+        Set<Integer> set=new HashSet<>();
+        //list.stream().filter(i->!set.add(i)).forEach(System.out::println);
+        list.stream().filter(i->i.toString().startsWith("1")).forEach(System.out::println);
 
     }
 }

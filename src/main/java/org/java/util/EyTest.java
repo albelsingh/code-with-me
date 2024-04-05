@@ -11,7 +11,7 @@ public class EyTest {
     public static void main(String[] args) {
         //Mock vs MockBean
         //runasSync and supplyasSync and CompletableFuture
-        //can we create object of abstract class
+        //can we create object of abstract class// no
         //terminate and intermidiate method, what if we don't apply terminator method to stream
         String s="i am an engineer"; //m
         System.out.println(s);
