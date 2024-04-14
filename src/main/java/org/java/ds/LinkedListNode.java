@@ -1,4 +1,4 @@
-package org.java.util;
+package org.java.ds;
 
 public class LinkedListNode {
     int value;

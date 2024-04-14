@@ -27,7 +27,6 @@ public class RotateArray {
         Arrays.stream(RotateArray.reverseArray(Arrays.copyOfRange(arr,arr.length-k,arr.length))).forEach(i->drr[j.getAndIncrement()]=i);
         System.out.println(Arrays.toString(drr));
         Arrays.stream(RotateArray.reverseArray(drr)).forEach(System.out::println);
-
     }
 
 }

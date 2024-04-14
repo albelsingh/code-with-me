@@ -6,9 +6,22 @@ import java.util.List;
 public class AnagramCode {
 
     public static String sortString(String str){
-        char[] ch=str.toCharArray();
-        Arrays.sort(ch);
-        return new String(ch);
+        //char[] ch=str.toCharArray();
+        //Arrays.sort(ch);
+        int j = 0;
+        char temp = 0;
+        char[] chars = str.toCharArray();
+        for(int i=0; i < chars.length; i++) {
+            for(j=0; j < chars.length; j++) {
+                if(chars[j] > chars[i]) {
+                    System.out.println(chars[j]+" "+chars[i]);
+                    temp = chars[i];
+                    chars[i] = chars[j];
+                    chars[j] = temp;
+                }
+            }
+        }
+        return new String(chars);
     }
 
     //RACE, CARE
@@ -17,6 +30,7 @@ public class AnagramCode {
        String s2="CARE";
        //length is same
         // Sort the string
+        System.out.println(sortString(s1));
         // compare both string
         if(s1.length()== s2.length()){
             if(AnagramCode.sortString(s1).equals(AnagramCode.sortString(s2))){

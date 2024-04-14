@@ -27,7 +27,7 @@ public class RKTN {
                if(file1.isFile()){
                    System.out.println("Your Files Again: "+ file.getName()+" File Size "+file);
                }else if(file1.isDirectory()){
-                  // showFiles(file1.listFiles());
+                   showFiles(file1.listFiles());
                }
            }
            return new ArrayList<>();

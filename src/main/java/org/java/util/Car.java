@@ -13,13 +13,11 @@ class Car{
         this.name = name;
         this.price = price;
     }
-}
-class HPEExample {
     public static void main(String[] args) {
         List<Car> carsList = new ArrayList<Car>();
         carsList.add(new Car(1,"Maruti",500000));
         carsList.add(new Car(2,"Hyundai",800000));
-        carsList.add(new Car(3,"Volswagon",900000));
+        carsList.add(new Car(3,"Volkswagon",900000));
         carsList.add(new Car(4,"Ford",1000000));
         carsList.add(new Car(5,"Audi",2500000));
 

@@ -50,9 +50,6 @@ double getCost(Product p), where p can be an indivisual selling product or a bun
     public double getCostOfSubProduct(List<Product> products){
         return products.stream().map(Product::getCost).mapToDouble(cost->cost).sum();
     }
-}
-
-class ProductDriver {
     // Main driver method
     public static void main(String args[]) {
         Product product=new Product();

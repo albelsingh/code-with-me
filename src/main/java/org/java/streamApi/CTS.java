@@ -84,9 +84,6 @@ public class CTS {
 
         return finalResult2.get(2); //n-1
     }
-}
-
-class GFG {
     // Main driver method
     public static void main(String args[]) {
         CTS cts=new CTS();

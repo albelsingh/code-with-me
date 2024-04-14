@@ -14,9 +14,6 @@ public class SumOfElements {
         System.out.println(list1.stream().filter(i-> !list2.contains(i)).mapToInt(i->i).sum());
         System.out.println(list2.stream().filter(i-> !list1.contains(i)).mapToInt(i->i).sum());
     }
-}
-
-class GFG {
     // Main driver method
     public static void main(String args[]) {
        SumOfElements.getSum();

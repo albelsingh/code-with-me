@@ -16,8 +16,6 @@ public class Folks {
     public void setName(String name) {
         this.name = name;
     }
-}
-class FolksDemo{
     public static void main(String[] args) {
         HashMap<Folks,String> map=new HashMap<>();
         Folks f1=new Folks("Xyz");

@@ -22,9 +22,6 @@ public class Employee {
  private int salary;
  private String dept;
 
-}
-@Slf4j
-class main{
     public static void main(String[] args) {
         System.out.println("Inside main method");
         ArrayList<Employee> emplist = new ArrayList<>();
@@ -37,8 +34,7 @@ class main{
         emplist.add(new Employee(110, "abc", 65, 30000,"Dev"));
         emplist.add(new Employee(110, "dummy", 75, 30000,"Dev"));
 
-        List<Employee> list= emplist.stream().sorted(Comparator.comparing(emp-> -emp.getSalary())).collect(Collectors.toList());
-        HashMap<String,Employee> map=new HashMap<>();
+         HashMap<String,Employee> map=new HashMap<>();
         emplist.forEach(employee -> {
             map.put(employee.getName(),employee);
         });
@@ -56,14 +52,14 @@ class main{
                 .sorted(Comparator.comparing(entry->-entry.getKey()))
                 .collect(toList())
                 .get(2));
-
+*/
         System.out.println("By Age::"+map.entrySet().stream()
                 .collect(Collectors.groupingBy(entry->entry.getValue().getAge(),Collectors.mapping(entry->entry.getKey(),toList())))
                 .entrySet()
                 .stream()
                 .sorted(Comparator.comparing(entry->-entry.getKey()))
                 .collect(toList())
-                .get(2));*/
+                .get(2));
 
         System.out.println(emplist.stream().sorted(Comparator.comparing(emp->- emp.getSalary())).collect(toList()).get(2));
 

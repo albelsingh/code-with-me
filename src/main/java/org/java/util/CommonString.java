@@ -37,9 +37,6 @@ So Longest common prefix in above String array will be “java” as all above s
         }
         return result;
     }
-}
-
-class Test10{
     public static void main(String[] args) {
         System.out.println(CommonString.getLongestCommonString());
     }
