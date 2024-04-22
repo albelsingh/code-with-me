@@ -1,6 +1,12 @@
-package org.java.util;
+package org.java.core;
 
-public class Monkey extends  Animal{
+public class Animal {
+    int i=20;
+    public void print(){
+        System.out.println("Animal ::"+i);
+    }
+}
+class Monkey extends Animal {
     int i=10;
     public void print(){
         System.out.println("Monkey ::"+i);
@@ -22,3 +28,4 @@ public class Monkey extends  Animal{
         monkey.m1(null); //String
     }
 }
+

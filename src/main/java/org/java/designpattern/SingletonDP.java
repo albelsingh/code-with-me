@@ -1,4 +1,4 @@
-package org.java.util;
+package org.java.designpattern;
 
 import java.util.Arrays;
 import java.util.List;

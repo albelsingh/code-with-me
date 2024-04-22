@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 
 // Class 1
 // Helper class
-class Singleton implements Cloneable, Serializable {
+ class Singleton implements Cloneable, Serializable {
     // Static variable reference of single_instance
     // of type Singleton
     private static volatile Singleton single_instance = null;
@@ -50,7 +50,7 @@ class Singleton implements Cloneable, Serializable {
     }
 }
 
-class SingletonDemo {
+class SingletonDemo{
     // Main driver method
     public static void main(String args[]) throws CloneNotSupportedException, InvocationTargetException, InstantiationException, IllegalAccessException, IOException, ClassNotFoundException {
         Singleton x = Singleton.getInstance();

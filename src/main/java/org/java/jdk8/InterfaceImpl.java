@@ -9,7 +9,7 @@ public class InterfaceImpl implements InterfaceA,InterfaceB{
         try {
            InterfaceImpl impl=new InterfaceImpl();
            impl.show();
-           //System.out.println(++InterfaceA.count);
+           System.out.println(InterfaceA.count);
             /**
              *  We can't assign value to final variable
              */

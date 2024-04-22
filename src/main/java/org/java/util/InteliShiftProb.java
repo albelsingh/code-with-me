@@ -19,8 +19,7 @@ public class InteliShiftProb {
             char ch = str.charAt(i);
             // Rest of the string after excluding
             // the ith character
-            String ros = str.substring(0, i) +
-                    str.substring(i + 1);
+            String ros = str.substring(0, i) + str.substring(i + 1);
             // Recursive call
             printPermutation(ros, ans + ch);
         }

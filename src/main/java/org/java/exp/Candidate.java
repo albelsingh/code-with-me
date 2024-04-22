@@ -1,4 +1,4 @@
-package org.java.util;
+package org.java.exp;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

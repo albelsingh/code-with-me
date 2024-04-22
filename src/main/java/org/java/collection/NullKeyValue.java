@@ -14,6 +14,7 @@ public class NullKeyValue {
          */
         Map<String, String> m=new HashMap<>();
         m.put(null,null); // it stores this entry at 0 index
+        m.put(null,"12");
         System.out.println(m);
 
         /**

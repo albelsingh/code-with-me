@@ -1,5 +1,6 @@
 package org.java.jdk8;
 
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -30,6 +31,7 @@ class MyFunctionalDemo{
         functionalInterface.doPayment(10);
         functionalInterface.scanQR();
         MyFunctionalInterface.getPaymentDate();
+        LocalDateTime ld=LocalDateTime.now();
 
         MyFunctionalInterface mf =(i)-> System.out.println("Payment using lambda Function " + i);
         mf.doPayment(10);

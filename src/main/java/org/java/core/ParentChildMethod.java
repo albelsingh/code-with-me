@@ -1,6 +1,6 @@
-package org.java.util;
+package org.java.core;
 
-public class Parent {
+public class ParentChildMethod {
         public void method1(){
             System.out.println("Parent method 1");
             method2();
@@ -15,7 +15,7 @@ public class Parent {
             System.out.println("Parent method 3");
         }
     }
-    class Child extends Parent{
+    class ChildMethod extends ParentChildMethod{
 
         @Override
         public void method1(){
@@ -27,14 +27,13 @@ public class Parent {
         public void method2(){
             super.method2();
             System.out.println("Child method 2");
-
         }
         public static void method3(){
             System.out.println("Child method 3");
         }
 
         public static void main(String[] args) {
-            Child c=new Child();
+            ChildMethod c=new ChildMethod();
             c.method1();
         }
     }

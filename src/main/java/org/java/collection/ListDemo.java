@@ -7,7 +7,8 @@ import java.util.List;
 public class ListDemo {
     public static void main(String[] args) {
 
-        /**1. can be declared list as final and modify
+        /**
+         * 1. can be declared list as final and modify
          * the list but can't reassign it
          *
          */
