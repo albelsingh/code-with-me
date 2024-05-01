@@ -21,6 +21,5 @@ public class CustomArrayList extends ArrayList {
         customArrayList.add(2);
         customArrayList.add(3);
         System.out.println(customArrayList);
-
     }
 }

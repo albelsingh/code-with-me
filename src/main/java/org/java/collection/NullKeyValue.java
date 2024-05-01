@@ -32,5 +32,9 @@ public class NullKeyValue {
         Map<String, String> map=new ConcurrentHashMap<>();
         map.put(null,null);
         System.out.println(map);
+        /**
+         * it does not allow null insertions in TreeSet
+         * null is allowed in HashSet
+         */
     }
 }

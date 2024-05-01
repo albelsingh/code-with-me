@@ -1,9 +1,6 @@
 package org.java.util;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public enum DeckofCards {
     ACE(14),
@@ -45,12 +42,32 @@ class PlayingCard implements Comparator<PlayingCard> {
     }
 
     @Override
+    public String toString() {
+        return "PlayingCard{" +
+                "rank=" + rank +
+                '}';
+    }
+
+    @Override
     public int compare(PlayingCard o1, PlayingCard o2) {
         if(o1.getRank() < o2.getRank()){
             return o2.getRank();
         }else{
             return o1.getRank();
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof PlayingCard)) return false;
+        PlayingCard that = (PlayingCard) o;
+        return getRank() == that.getRank();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getRank());
     }
 
     public static void main(String[] args) {

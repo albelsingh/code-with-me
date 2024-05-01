@@ -12,7 +12,7 @@ public class ParentConstructor {
 class ChildConstructor extends ParentConstructor{
     ChildConstructor(){
         //this("Constructor");  //parent class default constructor
-        //super("Constructor"); //parent class param constructor
+        super("Constructor"); //parent class param constructor
         System.out.println("Child Class Default Constructor");
     }
     ChildConstructor(String s){

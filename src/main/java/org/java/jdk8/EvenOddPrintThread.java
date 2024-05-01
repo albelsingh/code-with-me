@@ -1,5 +1,7 @@
 package org.java.jdk8;
 
+import java.time.LocalDateTime;
+
 public class EvenOddPrintThread implements Runnable{
     Object object;
     static int i=1;
@@ -38,6 +40,7 @@ public class EvenOddPrintThread implements Runnable{
         EvenOddPrintThread th2=new EvenOddPrintThread(obj);
         new Thread(th1,"even").start();
         new Thread(th2,"odd").start();
+        LocalDateTime localDateTime=LocalDateTime.now();
     }
 }
 

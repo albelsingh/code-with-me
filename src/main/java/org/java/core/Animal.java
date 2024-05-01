@@ -18,6 +18,15 @@ class Monkey extends Animal {
         System.out.println("String :::");
     }
 
+    /**
+     * reference to m1 is ambiguous
+     *   both method m1(java.lang.String)  and method m1(java.lang.StringBuffer)
+     *
+     */
+   /* public void m1(StringBuffer s){
+        System.out.println("String :::");
+    }*/
+
     public static void main(String[] args) {
         Animal animal=new Monkey();
         //Monkey monkey=new Animal();

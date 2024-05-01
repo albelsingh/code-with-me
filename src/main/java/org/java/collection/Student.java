@@ -2,9 +2,8 @@ package org.java.collection;
 
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Data
 //public class Student implements Comparable<Student>{
@@ -65,6 +64,9 @@ public class Student {
         students.add(s5);
         Collections.sort(students,new IdComparator());
         System.out.println(students);
+        List<Student> sortedStudent = students.stream().sorted(Comparator.comparing(Student::getId)).collect(Collectors.toList());
+        System.out.println(sortedStudent);
+
         /**
          * Comparable interface follow single sorting algorithm if we
          * need to sort based on name then again we have to change the

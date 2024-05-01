@@ -1,4 +1,4 @@
-package org.java.streamApi;
+package org.java.arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;

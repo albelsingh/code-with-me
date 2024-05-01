@@ -6,22 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StringUtils {
-    private static void sortZeroAndOne(int[] arr) {
-        int i=0;
-        int j=arr.length-1;
-        int temp;
-        while(i<j){
-            if(arr[i] ==1){
-                temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
-                j--;
-            }else {
-                i++;
-            }
-        }
-        Arrays.stream(arr).forEach(System.out::print);
-    }
+    private String str;
     private static void replaceFirstChar(List<String> list) {
         String name = list.get(0);
         for (int i = 0; i < list.size(); i++) {
@@ -41,14 +26,7 @@ public class StringUtils {
         list.add("name3");
         //name1->aame1,name2->mame2,name3->eame3
         replaceFirstChar(list);
-        /*
-        Input: N = 5, arr[ ] = {1,0,1,1,0}
-        Output: {0,0,1,1,1}
-        // Time Complexity : O(n)
-        // Space Complexity : O(1)
-         */
-        int arr[]={1,0,1,1,0,1,1,0};
-        sortZeroAndOne(arr);
+
         System.out.println("");
         //Input [1,2,3]  => Output [[1,2],[2,3],[3,4]]
         List<Integer> integerList= Arrays.asList(1,2,3,4);
@@ -61,5 +39,20 @@ public class StringUtils {
         mainList.add(list3);
         System.out.println(mainList);
         System.out.println(mainList.stream().flatMap(l->l.stream()).collect(Collectors.toList()));
+
+        String s1="ABC";
+        s1="XYZ";
+        System.out.println(s1);
+        String s2=s1+"QWE";
+        System.out.println(s2);
+
+        String str1=new String("Hello");
+        String str2=new String("Hello");
+        String str3="Hello";
+        String str4="Hello";
+        System.out.println(str1==str2);
+        System.out.println(str1==str3);
+        System.out.println(str4==str3);
+
     }
 }

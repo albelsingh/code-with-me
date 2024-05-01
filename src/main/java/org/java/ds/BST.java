@@ -56,9 +56,9 @@ public class BST {
         if(root==null)
             return false;
 
-        if(root.data>key){ //left subtree
+        if(key<root.data){ //left subtree
             return search(root.left,key);
-        } else if (root.data<key) {
+        } else if (key>root.data) {
             return search(root.right,key);
         } else { //root data is equal to key
             return true;

@@ -15,6 +15,7 @@ public class FlattenNestedArray {
         //Object[] brr = {new Object[]{ 3, 4,5, 6, 7 },new Object[]{ 8, 9, 10 }};
         System.out.println(flatten(array).collect(Collectors.toList()));
 
+
         List<List<String>> nestedList = Arrays.asList(
                 Arrays.asList("one:one"),
                 Arrays.asList("two:one", "two:two", "two:three"),
