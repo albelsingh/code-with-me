@@ -33,18 +33,18 @@ class UpdateHashSet {
         Alien st4 = new Alien("Rohit", 4);
         Alien st5 = new Alien("Pooja", 2);
         Alien st6 = new Alien("Albel", 3);
-        studentList.add(st1);
-        studentList.add(st2);
-        studentList.add(st3);
-        studentList.add(st4);
-        studentList.add(st5);
-        studentList.add(st6);
+        System.out.println(studentList.add(st1));
+        System.out.println(studentList.add(st2));
+        System.out.println(studentList.add(st3));
+        System.out.println(studentList.add(st4));
+        System.out.println(studentList.add(st5));
+        System.out.println(studentList.add(st6));
         System.out.println(studentList.size()+" "+studentList); //4
         st1.id = 3;
         System.out.println(studentList.size()+" "+studentList);  //4
         st1.id = 5;
         System.out.println(studentList.contains(st1)+" "+studentList); //false
-        System.out.println(st1);
+        System.out.println(studentList.contains(st5)); //true
 
     }
 
