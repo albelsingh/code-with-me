@@ -1,5 +1,8 @@
 package org.java.designpattern;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONObject;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
@@ -58,7 +61,6 @@ public class StudentXMLParser {
 
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
-
             StudentXMLParser student = (StudentXMLParser) unmarshaller.unmarshal(file);
             //StudentXMLParser student = (StudentXMLParser) unmarshaller.unmarshal(new StringReader(strXML));
 
@@ -71,6 +73,14 @@ public class StudentXMLParser {
 
             Marshaller marshaller=jaxbContext.createMarshaller();
             marshaller.marshal(student,new File("NewStudent.xml"));
+
+            //Json
+            JSONObject jsonObject= new JSONObject(student);
+            System.out.println("Json object ::"+jsonObject);
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            StudentXMLParser studentXMLParser = objectMapper.readValue(jsonObject.toString(), StudentXMLParser.class);
+            System.out.println("Java object from Json::"+studentXMLParser);
 
         } catch (Exception e) {
             e.printStackTrace();
