@@ -1,6 +1,6 @@
 package org.java.ds;
 
-class LinkedList {
+class LinkedListDemo {
     static Node head;
     static class Node {
         int data;
@@ -46,7 +46,7 @@ class LinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedListDemo list = new LinkedListDemo();
         list.head = new Node(85);
         list.head.next = new Node(15);
         list.head.next.next = new Node(4);

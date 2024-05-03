@@ -44,7 +44,7 @@ class UpdateHashSet {
         System.out.println(studentList.size()+" "+studentList);  //4
         st1.id = 5;
         System.out.println(studentList.contains(st1)+" "+studentList); //false
-        System.out.println(studentList.contains(st5)); //true
+        System.out.println(studentList.contains(st2)); //true
 
     }
 
