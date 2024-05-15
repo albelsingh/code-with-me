@@ -22,7 +22,7 @@ public class NullKeyValue {
          * it also lock entire object
          */
         Hashtable<Integer,String> hashtable = new Hashtable();
-        hashtable.put(null,null);
+       // hashtable.put(null,null);
         System.out.println(hashtable);
 
         /**
@@ -30,7 +30,7 @@ public class NullKeyValue {
          * it apply segment locking mechanism
          */
         Map<String, String> map=new ConcurrentHashMap<>();
-        map.put(null,null);
+        //map.put(null,null);
         System.out.println(map);
         /**
          * it does not allow null insertions in TreeSet

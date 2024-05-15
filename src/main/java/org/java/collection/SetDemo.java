@@ -17,6 +17,7 @@ public class SetDemo {
         integerSet.add(10);
         integerSet.add(30);
         System.out.println(integerSet);
+
         /**
          * If you are using any custom or wrapper class object you need to override hashcode and equal method
          */

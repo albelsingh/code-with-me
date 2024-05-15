@@ -16,10 +16,18 @@ public class FailFastMap {
         m.put(2,"Murari");
 
         Iterator<Integer> it = m.keySet().iterator();
+
         while(it.hasNext()){
             Integer key = it.next();
             System.out.println(key+" :"+m.get(key));
             m.put(3,"Ajay");
+        }
+        Iterator<Map.Entry<Integer, String>> iterator1 = m.entrySet().iterator();
+        while(iterator1.hasNext()){
+            Map.Entry<Integer, String> next = iterator1.next();
+            next.getValue();
+            next.getKey();
+
         }
         /**
          * Fail fast:
