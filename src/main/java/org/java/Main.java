@@ -117,7 +117,7 @@ public class Main {
 
         Set<Integer> set=new HashSet<>();
         //list.stream().filter(i->!set.add(i)).forEach(System.out::println);
-        list.stream().filter(i->i.toString().startsWith("1")).forEach(System.out::println);
+        list.stream().filter(i->i.toString().startsWith("2")).forEach(System.out::println);
 
         List<Integer>  listInteger=Arrays.asList(2,1,2,4,3,1);
         List<Integer> values = listInteger.stream().collect(Collectors.groupingBy(Function.identity(),
