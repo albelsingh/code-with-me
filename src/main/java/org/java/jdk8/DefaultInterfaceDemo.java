@@ -77,3 +77,4 @@ class Test implements Left,Right{
         t.m1();
     }
 }
+//test
