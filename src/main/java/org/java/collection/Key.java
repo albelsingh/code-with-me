@@ -30,9 +30,6 @@ class Key {
                 "keyStr='" + keyStr + '\'' +
                 '}';
     }
-}
-
-class Main {
     public static void main(String[] args) {
         Map<Key, Integer> map = new HashMap<>();
         Key k1 = new Key();

@@ -4,10 +4,13 @@ package org.java.collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class CustomThread extends Thread {
 
-    static Map<Integer, String> map = new HashMap<Integer, String>();
+    //static Map<Integer, String> map = new HashMap<Integer, String>(); // ConcurrentModificationException
+    static Map<Integer, String> map = new ConcurrentHashMap<>(); //No ConcurrentModificationException
+
 
     public void run() {
         try {

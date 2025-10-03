@@ -6,8 +6,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Data
-//public class Student implements Comparable<Student>{
-public class Student {
+public class Student implements Comparable<Student>{
+//public class Student {
     private int id;
     private String name;
 
@@ -29,16 +29,16 @@ public class Student {
         return Objects.hash(id, name);
     }
 
-   /* @Override
+    @Override
     public int compareTo(Student s) {
          if(this.id<s.id)
             return -1;
         else if (this.id>s.id) {
             return 1;
         }
-        return 0;
-        //return -this.name.compareTo(s.name);
-    }*/
+        //return 0;
+        return this.name.compareTo(s.name);
+    }
 
     @Override
     public String toString() {
@@ -62,8 +62,16 @@ public class Student {
         students.add(s2);
         students.add(s6);
         students.add(s5);
+        Collections.sort(students);
+        System.out.println(students);
+        //Sorting Based on Id
         Collections.sort(students,new IdComparator());
         System.out.println(students);
+
+        //Sorting based on Name
+        Collections.sort(students,new NameComparator());
+        System.out.println(students);
+
         List<Student> sortedStudent = students.stream().sorted(Comparator.comparing(Student::getId)).collect(Collectors.toList());
         System.out.println(sortedStudent);
 

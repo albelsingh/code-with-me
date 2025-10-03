@@ -125,5 +125,15 @@ public class Main {
                 .map(Map.Entry::getKey).collect(Collectors.toList());
         System.out.println("Unique Number"+values);
 
+        String s1=new String("javaexpert");
+        String s2="javaexpert";
+        System.out.println(s1.hashCode());
+        System.out.println(s1.intern().hashCode());
+        System.out.println(s2.hashCode());
+        System.out.println(s2.intern().hashCode());
+        System.out.println(s1.hashCode()==s2.hashCode());
+        System.out.println(s1==s2);
+        System.out.println(s1.equals(s2));
+
     }
 }

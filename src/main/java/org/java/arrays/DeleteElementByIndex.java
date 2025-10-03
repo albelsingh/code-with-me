@@ -47,7 +47,7 @@ public class DeleteElementByIndex {
     }
     public static void main(String[] args) {
         int [] array=new int[]{1,2,3,4,5,1,2,3}; //4
-        //System.out.println(Arrays.toString(deleteElement(array,5)));
+        System.out.println(Arrays.toString(deleteElement(array,5)));
         int [] brr = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3};
         Set<Integer> set=new HashSet<>();
         Arrays.stream(brr).filter(i->!set.add(i)).forEach(System.out::println);

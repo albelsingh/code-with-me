@@ -3,7 +3,7 @@ package org.java.collection;
 import org.java.util.Person;
 
 import java.util.ArrayList;
-
+// Create Custom Arraylist where duplicate is not allowed in list
 public class CustomArrayList extends ArrayList {
     @Override
     public boolean add(Object o){
