@@ -36,5 +36,12 @@ public class DuplicateNumber {
         int[] arr=new int[]{1,2,2,3,4,4,5};
         int[] brr=removeDuplicates(arr);
         System.out.println(Arrays.toString(brr));
+
+        //approach-2
+        int [] crr = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3};
+        Set<Integer> set=new HashSet<>();
+        System.out.println("Duplicate Number are :");
+        Arrays.stream(crr).filter(i->!set.add(i)).forEach(System.out::println);
+        System.out.println(set);
     }
 }

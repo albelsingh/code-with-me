@@ -1,6 +1,13 @@
 package org.java.util;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
 
 public class Folks {
     private String name;
@@ -37,5 +44,11 @@ public class Folks {
         System.out.println(s1==s2);
         System.out.println(s1==s3);
         System.out.println(s4==s3);
+
+        String str= "ai is powerful addon skills for an engineer";
+        System.out.println(Arrays.stream(str.split("")).filter(i->!i.equals(" ")).collect(
+                groupingBy(Function.identity(), LinkedHashMap::new,counting())
+        ).entrySet().stream().filter(m->m.getValue()==1).findFirst().get());
+
     }
 }

@@ -2,7 +2,9 @@ package org.java.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 
 public class LowesEmp {
@@ -60,23 +62,19 @@ public class LowesEmp {
         this.dept = dept;
     }
 
-    public void reverseArray(){
+    public static void reverseArray(){
         int arr[]=new int[]{1,2,3,4,5,6};
-        int start=1;
-        int end=4;
-        for(int i=start;i<=end;i++){
-            int temp=arr[start];
-            arr[start]=arr[end];
-            arr[end]=temp;
-            start++;
-            end--;
+        for(int i=0,j= arr.length-1;i<arr.length/2;i++,j--){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
         }
-        for(int i=0;i<arr.length;i++)
-            System.out.println(arr[i]);
+        System.out.println(Arrays.toString(arr));
     }
 
     // 1 2 3 4 5 6 ->1,4->1,5,4,3,2,6
     public static void main(String[] args) {
+        reverseArray();
         //Unmodifiable List
         List<Integer> listInt=Arrays.asList(1,2,3,4,5);
         /*listInt.add(new Integer(10));
@@ -89,40 +87,30 @@ public class LowesEmp {
         l2.add(30);
         System.out.println(l2.stream().mapToInt(i->i).sum());
 
-        // Can we declare list as final -> yes
+        // Can we declare list as final -> yes but we can't reassign list
         final List<Integer> l1=new ArrayList<>();
         l1.add(10);
+        l1.add(20);
         System.out.println(l1);
         //1 4 6 8 10 23 67
         //k=2
         LowesEmp e1=new LowesEmp("1","Albel",10000,"IT");
         LowesEmp e2=new LowesEmp("2","Chetan",1000000000,"CS");
         LowesEmp e3=new LowesEmp("3","Manish",10000,"EC");
-        LowesEmp e4=new LowesEmp("4","Ajay",10000,"EC");
+        LowesEmp e4=new LowesEmp("4","Ajay",20000,"EC");
         List<LowesEmp> list=new ArrayList<>();
         list.add(e1);
         list.add(e2);
         list.add(e3);
         list.add(e4);
-        System.out.println(list.stream().collect(Collectors.groupingBy(st->st.getDept())));
+        System.out.println(list.stream().collect(
+                Collectors.groupingBy(st->st.getDept(),Collectors.reducing(BinaryOperator.maxBy(Comparator.comparing(e->e.getSalary()))))
+        ));
 
        /* TreeSet<StringBuilder> t=new TreeSet<>(); //
         t.add(new StringBuilder("albel"));
         t.add(new StringBuilder("chetan"));
         System.out.println(t);//ClassCastException: java.lang.StringBuilder cannot be cast to java.lang.Comparable
         //SOLID*/
-
-        int arr[]=new int[]{1,2,3,4,5,6};
-        int start=1;
-        int end=4;
-        for(int i=start;i<=end;i++){
-            int temp=arr[start];
-            arr[start]=arr[end];
-            arr[end]=temp;
-            start++;
-            end--;
-        }
-        for(int i=0;i<arr.length;i++)
-            System.out.println(arr[i]);
     }
 }

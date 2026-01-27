@@ -29,7 +29,7 @@ public class Employee {
 
     public static void main(String[] args) {
         System.out.println("Inside main method");
-        ArrayList<Employee> emplist = new ArrayList<>();
+        List<Employee> emplist = new ArrayList<>();
         emplist.add(new Employee(101, "vinod", 25, 10000,"Dev"));
         emplist.add(new Employee(107, "kumar", 35, 20000,"QA"));
         emplist.add(new Employee(103, "ravi", 15, 5000,"Dev"));

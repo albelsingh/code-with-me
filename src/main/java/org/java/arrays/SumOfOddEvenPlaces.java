@@ -27,6 +27,7 @@ public class SumOfOddEvenPlaces {
     public static void main(String[] args) {
         Scanner kb=new Scanner(System.in);
         String num="214365";
+        System.out.println("Enter Number");
         num=kb.next();
         String [] a= num.split("");
         System.out.println(getSum(a));

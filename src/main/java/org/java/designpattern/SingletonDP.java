@@ -17,10 +17,10 @@ s="Test";
     }
 
     public static void main(String[] args) {
-        String s1 = "Öne";
+        String s1 = "One";
         s1.concat("TWO");
         s1.concat("THREE");
-        //System.out.println(s1);
+        System.out.println(s1);
         SingletonDP obj1=SingletonDP.getObject();
         SingletonDP obj2=SingletonDP.getObject();
         SingletonDP obj3=SingletonDP.getObject();

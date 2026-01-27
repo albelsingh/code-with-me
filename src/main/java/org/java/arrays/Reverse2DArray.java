@@ -18,20 +18,26 @@ public class Reverse2DArray {
     {
 
         // Traverse each row of arr[][]
-        for (int i = 0; i < M; i++) {
+        for (int i = 0, k=M-1; i < M-1; i++,k--) {
 
             // Initialise start and end index
-            int start = 0;
-            int end = N - 1;
+            int start = 0; //0 1 2
+            int end = N-1; //2 1 0
 
             // Till start < end, swap the element
             // at start and end index
-            while (start < end) {
-
+            while (start <= M-1 && end >= 0) {
+                int temp;
                 // Swap the element
-                int temp = arr[i][start];
-                arr[i][start] = arr[i][end];
-                arr[i][end] = temp;
+                if(i != k) {
+                    temp = arr[i][start];
+                    arr[i][start] = arr[k][end];
+                    arr[k][end] = temp;
+                }else if(i==k && start < end) {
+                    temp = arr[i][start];
+                    arr[i][start] = arr[k][end];
+                    arr[k][end] = temp;
+                }
 
                 // Increment start and decrement
                 // end for next pair of swapping
@@ -55,6 +61,7 @@ public class Reverse2DArray {
                 { 4, 5, 6 },
                 { 7, 8, 9 } };
         reverseArray(brr);
+        System.out.println("----------------");
       /*  int count=1;
         int i=0;
         int j=0;

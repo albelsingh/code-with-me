@@ -12,7 +12,7 @@ public class StringDupChar {
         String s ="hdssdrrssaaddfss";
         List<Map.Entry<String, Long>> entryList = Arrays.stream(s.split("")).collect(Collectors.groupingBy(
                 Function.identity(), Collectors.counting())).entrySet().stream().filter(m -> m.getValue() > 1).collect(Collectors.toList());
-        //System.out.println(entryList);
+        System.out.println(entryList);
 
         Consumer<String> stringConsumer= str-> System.out.println(str);
         Arrays.asList("test","Ajay","xyz").forEach(stringConsumer);

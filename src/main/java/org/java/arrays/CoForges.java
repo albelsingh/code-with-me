@@ -58,14 +58,24 @@ public class CoForges {
                 hashMap.put(i, 1);
             }
         });
-    }
+        //approach-2
+        for(int i=0;i<arr.length; i++){
+            int rem=sum-arr[i];
+            for(int j=i;j<arr.length;j++){
+                if(rem==arr[j]){
+                    System.out.println(arr[i]+" "+arr[j]);
+                    break;
+                }
+            }
+        }
+        }
 
     public static void main(String[] args) {
         CoForges test = new CoForges();
         String input = "Bangalore";
         String str = test.reverseString(input);
         System.out.println("String is :: " + input + ", After reverse :: " + str);
-        int arr[] = {1, 5, 7, -1, 5};
+        int arr[] = {1, 5, 7,-1};
         int n = arr.length;
         int sum = 6;
         printPairs(arr, n, sum);

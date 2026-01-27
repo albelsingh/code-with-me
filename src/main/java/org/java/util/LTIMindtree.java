@@ -6,8 +6,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class LTIMindtree {
-
-
     public static void main(String[] args) {
         Map<String,Integer> empMap=new HashMap();
         empMap.put("Ravi",24000);

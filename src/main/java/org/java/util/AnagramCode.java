@@ -1,7 +1,11 @@
 package org.java.util;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class AnagramCode {
 
@@ -54,6 +58,8 @@ public class AnagramCode {
             }
         }
         System.out.println(prev+" "+max);
+        Integer sorted = list.stream().sorted(Comparator.reverseOrder()).skip(1).collect(Collectors.toList()).get(0);
+        System.out.println(sorted);
 
     }
 }

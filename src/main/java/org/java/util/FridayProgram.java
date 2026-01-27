@@ -29,7 +29,7 @@ public class FridayProgram {
         //String s="aalbbe 5645ghf"; //a
         String s="i am an engineerf"; //m
         Map.Entry<String, Long> stringLongEntry = Arrays.stream(s.split("")).filter(s1->!s1.equals(" ")).collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new, Collectors.counting())).entrySet().stream()
-                .filter(m -> m.getValue() == 2).findFirst().get();
+                .filter(m -> m.getValue() == 1).findFirst().get();
         System.out.println(stringLongEntry);
     }
 
