@@ -1,8 +1,5 @@
 package org.java.ds;
 
-import com.sun.org.apache.xpath.internal.objects.XNodeSet;
-import net.bytebuddy.dynamic.scaffold.MethodGraph;
-
 import java.util.HashSet;
 
 public class LinkedListNode {
